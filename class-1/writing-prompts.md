@@ -1,8 +1,9 @@
 # How GitHub works (2 pts each)
 Describe what we mean when we say that GitHub is both “Git” and “Hub”.
   * It is a open source version control system that tracks changes with collaborators and the community online. The GIT is the software, data, and open source system; the Hub is the collaboration and communtity side. 
+
 Why might you want to fork a repository?
-  * 
+  * Forking allows you to experiment with projects before making a permanent change. Forking is an exact copy of a master project, so you can experiment with changes without affecting the main project.
 
 # How the internet works (2 pts each)
 Why is HTTP a thing?
