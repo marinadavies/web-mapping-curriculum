@@ -7,7 +7,7 @@ Why might you want to fork a repository?
 
 # How the internet works (2 pts each)
 Why is HTTP a thing?
- * HTTP is the rotocol which indicates what the browser must use for exchanging or transferring data.
+ * HTTP is the protocol which indicates what the browser must use for exchanging or transferring data.
  
 What is an API and why do APIs like the deck of cards thing exist?
  * An API is a set of procedures that have the ability to create applications or services for users to use and manipulate if desired. APIS exist so programmers can create software that other users can use such as deck of cards for gambling or google maps for directions. 
