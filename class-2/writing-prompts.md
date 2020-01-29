@@ -5,10 +5,10 @@
 * Slippy maps exist because it makes it easier for the user to see adjacent areas or tiles near their point of interest. Previously, if an address bordered the edge of one tile, it would be hard for the user to find it on any other tile. Slippy maps have multiple zoom levels so it makes it easier for users to find places in the world. 
 
 # Why would you want to install a dedicated text editor?
-
+* A dedicated text editor is essential for writing code. These programs make it easy to write and edit codes in various formats, such as HTML or CSS. 
 
 # What is Leaflet?
-
+* 
 
 # How has web map rendering changed over the years?
 
