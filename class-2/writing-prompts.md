@@ -8,7 +8,7 @@
 * A dedicated text editor is essential for writing code. These programs make it easy to write and edit codes in various formats, such as HTML or CSS. 
 
 # What is Leaflet?
-* 
+* Leaflet is an open source JavaScript library that is used to build web maps. Leaflet is open to the public and allows users to create and customize tiled web maps. 
 
 # How has web map rendering changed over the years?
 
