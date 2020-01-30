@@ -1,4 +1,4 @@
-# What is the difference between raster and vector data?
+## What is the difference between raster and vector data?
 * Raster tiles are images and plain HTML elements that can be manipulated and rendered on the fly. Vector data can be stored in vector tiles. With vector tiles, you only store data and code rules for how you want the map to look like. Rendering vector tiles happens at the end. 
 
 # Why do "slippy maps" exist?
