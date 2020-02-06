@@ -4,9 +4,10 @@
 * 
 
 ### Why do we use the term “map user” instead of “map reader?”
-*
+* In web mapping, map users are the audience the map designer had in mind when creating an interactive map. Old school maps, like cartography, were printed so the people using the map were "reading it". With digital and web mapping, it makes more sense to say map user because people are interactiving with the map in live time rather than reading it. 
 
 ## Common types of interaction
+* Common types of interactions include: popups, search bar, geolocation button, pan/zoom, zoom/pan/fly to, tilt and rotate. 
 
 ### What is geocoding and how might you add it to an interactive map?
 *
