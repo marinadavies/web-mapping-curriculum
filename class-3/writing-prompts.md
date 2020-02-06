@@ -1,7 +1,7 @@
 ## Intro to interactivity
 
 ### What are some strategies interactive map developers can use to ensure maps with a lot of interactions are not overwhelming?
-* 
+* To ensure maps with a lot of interactions are not overwhelming, the developer can create popups or have additional information downloadable so that the user can pick and choose what they want to take away from the map without having it all out at once. The developer can also have multiple interations as options so the user can choose what makes the most sense to them and whatever they are researching. 
 
 ### Why do we use the term “map user” instead of “map reader?”
 * In web mapping, map users are the audience the map designer had in mind when creating an interactive map. Old school maps, like cartography, were printed so the people using the map were "reading it". With digital and web mapping, it makes more sense to say map user because people are interactiving with the map in live time rather than reading it. 
