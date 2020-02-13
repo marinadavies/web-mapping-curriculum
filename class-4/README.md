@@ -1,7 +1,8 @@
 ### Objects recap
 
-An object is a series of ____’s : ____’s
-
+An object is a series of key’s : value’s
+  -
+  
 What kinds of things can be included in an object?
 
 ### Intro to “client-side”
