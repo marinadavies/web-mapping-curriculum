@@ -1,16 +1,19 @@
-### Content for class 4. 
+### Objects recap
 
-Class presentation materials are on [Google Drive here]() 🚧
+An object is a series of ____’s : ____’s
 
-__Homework__
+What kinds of things can be included in an object?
 
-For your class journal:
+### Intro to “client-side”
 
-Exercises to do on your own:
+What does client-side rendering mean in the context of web maps?
 
+Why is it possible for Mapbox GL JS to place labels dynamically as you interact with the map?
 
-__Project__
+### Jurisdiction finder recap For the following 3 prompts, reference the working file and README.md in the jurisdiction finder explanation folder in the main class repo.
 
+Describe how feature gets to the makeFeatureLabel() function.
 
+What does the getDistrictNumber() function do?
 
-__Additional learning materials__
+Looking at the callback to map.on('click',...), what is e and why do we need it?
