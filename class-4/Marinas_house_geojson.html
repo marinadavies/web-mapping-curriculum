@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Add a GeoJSON polygon</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoibWFyaW5hZGF2aWVzIiwiYSI6ImNrNWhkZDJqMDAybWsza3B4Yzh6Y3EzeTUifQ.Q1If3_V9-bmk32fLj6pwcA';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-122.0379867, 37.5555796],
+        zoom: 17
+    });
+
+    map.on('load', function() {
+        map.addSource('maine', {
+            'type': 'geojson',
+            'data': {
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Polygon',
+                    'coordinates': [
+                        [
+                            [-482.03806132078165, 37.55556713329296],
+                            [-482.0377153158188, 37.55543104645389],
+                            [-482.0376268029213, 37.55553098525056],
+                            [-482.03797549009323, 37.55566281920287],
+                            [-482.03806132078165, 37.55556713329296]
+                            
+                        ]
+                    ]
+                }
+            }
+        });
+        map.addLayer({
+            'id': 'maine',
+            'type': 'fill',
+            'source': 'maine',
+            'layout': {},
+            'paint': {
+                'fill-color': '#088',
+                'fill-opacity': 0.8
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
