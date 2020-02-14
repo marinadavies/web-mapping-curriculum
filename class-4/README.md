@@ -17,6 +17,8 @@ Why is it possible for Mapbox GL JS to place labels dynamically as you interact 
 
 Describe how feature gets to the makeFeatureLabel() function.
   * The makeFeatureLabel function is a code that gets queried data to be displayed in a more user appropriate way. For example, given a feature, this function translates the feature's corresponding map layer (such as us-congress) to a readable name (such as US Congressional district). 
+  
+  * The user clicks on a feature, which kickstarts the loop for features, which calls on the featureHTML, which calls on the makefeaturelabel function, and spits out a label string (in-class explanation)
 
 What does the getDistrictNumber() function do?
   * The getDistrictNumber function is similar to the makeFeatureLabel function. Given a feature, this code translates between the feature's corresponding map layer (sf-supervisor) and the appropriate district ID attribute name (supdist, which is district value) and then returns to the client the district ID number for whichever district they clicked on. 
