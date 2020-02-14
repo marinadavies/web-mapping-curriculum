@@ -24,4 +24,4 @@ What does the getDistrictNumber() function do?
   * The getDistrictNumber function is similar to the makeFeatureLabel function. Given a feature, this code translates between the feature's corresponding map layer (sf-supervisor) and the appropriate district ID attribute name (supdist, which is district value) and then returns to the client the district ID number for whichever district they clicked on. 
 
 Looking at the callback to map.on('click',...), what is e and why do we need it?
-  * e is the event object parameter. The event object may contain information, such as lat long coordinates of a clicked location, which is important for determining where/ how interactivity (such as popups) should occur or what information to pull. 
+  * e is the event object parameter. The event object may contain information, such as lat long coordinates of a clicked location, which is important for determining where/ how interactivity (such as popups) should occur or what information to pull. The e indicates an event that occured (someone clicked) to kickstart the code that dictates what happens in the event of a "click" for example. 
