@@ -3,7 +3,8 @@
 Find at least two web mapping examples that allow for user analysis. For each example provide: 1) a link to the web map and 2) a description of the user analysis
   * https://docs.mapbox.com/help/how-mapbox-works/geospatial-analysis/
   This analysis allows you to measure a distance from point to point. 
-  *https://docs.mapbox.com/help/tutorials/analysis-with-turf-mapbox-js/
+  
+  * https://docs.mapbox.com/help/tutorials/analysis-with-turf-mapbox-js/
   This analysis allows users to find the nearest hospital from a library, in case you need a doctor after visiting a library... 
   
 Give an example of static data you might include on a web map. How is your example different from dynamic data?
