@@ -22,6 +22,14 @@ What is turf.js? Give an example of how you could apply a turf operation to a we
 ## Inline writing prompts
 
 Describe where the centroids variable comes from. How is it possible for you to reference this variable when you didn't declare it?
+ * For my map, the centroids variable was downloaded and saved onto my computer as a javascript file. I used script source to call on this file without actually referencing the variable in the code. 
+ 
 Why might you want to create the 'centroids-selected' layer after you've created the 'centroids' layer?
+ * You would want to create the centroids selected layer after the centroids layer because it would reference its data source from the centroids layer. 
+ 
 Should you set the marker's lngLat and add it to the map? Why or why not?
+ * I set the markers lngLat to the clickedLngLat so that when the user clicks on a location the lngLat will be set to that location. If you actually set a location I don't think this would work because this function is suppose to work for clicked locations. 
+ 
 How did you know which arguments to pass to the pip() function?
+ * I used the centroid and search-radius arguments so that it would select centroids within a 200 meter radius that the user clicked. 
+ 
