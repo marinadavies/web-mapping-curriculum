@@ -19,5 +19,7 @@ Can you name any tools (either from the presentation or your web travels) that w
 ### CORS and working with external data
 
 In your own words, describe why web map developers have to think about CORS.
-
+ * Cross origin resource sharing allows restricted resources on a web page to be requested by a user outside that restricted resource. Web map developers have to think about how to access restricted resources and gain permission. 
+ 
 What is the concept of "separation of concerns?"
+ * The concept of separation of concerns is that web developers need to think about the differect aspects of creating a web page for users. The developer needs to think about the design and style, logic, and content of the page. These three things need to flow and avoid having concepts mixed or be confusing. 
