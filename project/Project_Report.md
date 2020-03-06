@@ -55,6 +55,17 @@ County Boundaries are displayed as dark grey lines with the stylistic emphasis o
 ##### Management Agency 
 Management Agency will is not visually represented on the map. Instead it is a callable layer that provides the user with the information of which agency controls the clicked portion of the map. Inclusion of the visual representation of management agencies would likely clutter the map and take away from the most important geographic information of WUI and current threat status, and would confuse our situational awareness county boundaries layer. 
 
+##### Web Map Coding 
+
+In order to display the data prepared above, we created a web page containing a webmap coded using mapbox script and styling. To manage the overall layout of the website, we used CSS Flexboxes, coding a header box which fills the top 10% of the page while spanning the entire width and a container box filling the remaining 90% of the screen. Within the container there are two additional side-by-side boxes, the map box using 75% of the container and the data taking up the remaining 25%. Using these flexboxes allows these proportions to take up all of the available space on any computer screen accessing the data, creating a neat and functional webpage for all users regardless of computer screen size.
+
+Next, the webmap was coded into the map flexbox. Controls were added to allow the user to zoom in and out using navigation control and to locate themselves using a geolocate feature. Then, an event listener was coded, listening for the user’s click within the map area. At the time of the click, the function pulls label data from the county, wildfire threat class, and wildfire management agency and stores it to be displayed with coding in a different flexbox.
+
+The final flexbox displays data and has clickable links to enhance the user’s understanding of the webmap. A button was coded to allow the user to quickly zoom in on the Bay Area in order to show the functionality of the threat class layer. In future iterations of this map where state-wide data would be available, this button may not be necessary. Next, we created a space to display the data queried during the click event described above. This shows the user the county, management agency, and, currently in the bay area only, the threat class at the location of the click. Below the output of the click function, we included a legend showing the cartographic symbology for the WUI and threat classes, followed by an explanation of the layer and a link to additional information from the respective sources of the data. Finally, we provided a link to this document to further assist the user in understanding the purpose and intended use of the map.
+
+### Challenges and Suggestions
+
+
 
 
 ### References
