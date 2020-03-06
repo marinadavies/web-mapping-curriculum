@@ -52,6 +52,9 @@ Originally, this dataset was a raster and needed to be converted to a shapefile.
 ##### County Boundaries 
 County Boundaries are displayed as dark grey lines with the stylistic emphasis of showing the user the name of the counties being viewed and where boundaries are between counties for situational awareness. On the map, the user can click on an area within California and the sidebar will display what county the user clicked on. This is to help simplify the information generated on the map so the user doesn’t have to always zoom out to see what county they are in. 
 
+##### Management Agency 
+Management Agency will is not visually represented on the map. Instead it is a callable layer that provides the user with the information of which agency controls the clicked portion of the map. Inclusion of the visual representation of management agencies would likely clutter the map and take away from the most important geographic information of WUI and current threat status, and would confuse our situational awareness county boundaries layer. 
+
 
 
 ### References
