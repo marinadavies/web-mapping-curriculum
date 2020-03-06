@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>California Fire Threat</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+  body { 
+        margin: 5vh; 
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+  
+  header{
+    flex-basis: 10%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  #container{
+      flex-basis: 90%;
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+   }
+
+  #map {
+        flex-basis: 75%;  
+        box-sizing: border-box;
+
+      }
+  #dataContainer {
+    flex-basis: 25%; 
+    box-sizing: border-box;
+    margin-left: 40px;
+    margin-right: 10px;
+  }
+
+  .data-descriptor {
+    font-weight: bold;
+  }
+  .helper-text {
+    color: #999;
+  }
+</style>
+</head>
+<body>
+  <header>
+  <h1><img src="https://ak2.picdn.net/shutterstock/videos/1034823932/thumb/1.jpg" height=30 width=50><font color="red">California Wildfire Threat Portal<img src="https://ak2.picdn.net/shutterstock/videos/1034823932/thumb/1.jpg" height=30 width=50></font></h1>
+  <i>Marina Davies and Lelea Lingo</i>
+  </header>
+ <div id="container"> 
+  <div id="map"></div>
+  <div id="dataContainer">
+    <style>
+      #fly {
+      display: block;
+      position: relative;
+      margin: 0px auto;
+      width: 85%;
+      height: 40px;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      font-size: 17px;
+      text-align: center;
+      color: #fff;
+      background: lightskyblue;
+      }
+      </style>
+      <button id="fly">Zoom to San Francisco Bay Area</button>
+    <H2>Selected Location:</H2>
+    <div id="dataList">
+        <p class="helper-text">Click on the map for information.</p>
+    </div>
+    <img src="https://1.bp.blogspot.com/-IIuPvDJW5q0/XmG6pUUwRoI/AAAAAAAAHCk/hxkkYqUOtt8qkgYxi5LVC-4cK8gBWHP8ACLcBGAsYHQ/s320/Legend.JPG" alt="CA Fire Threat Scale" width="400"
+         height="120">
+    <p><b>What is a WUI?</b> Wildfire Urban Interface is a group of homes or structures with basic infrastructure and services where conditions are conducive to a wildfire disturbance. <a href="https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fsbdev3_053107.pdf"  target="_blank">U.S. Forest Service</a> </p>
+    <p><b>What are the threat classes?</b> The California Fire and Resources Protection Program designates areas as either low, moderate, high, or very high. <a href="https://www.sccgov.org/sites/dpd/DocsForms/Documents/Fire_Hazard_Zone_Fact_Sheet.pdf"  target="_blank">California FRAP</a></p>
+    <p><a href="https://github.com/marinadavies/web-mapping-curriculum/blob/master/project/Project_Report.md" target="_blank">Click here to find out more about this project!</a></p>
+  </div>
+<script>
+    var layersList = {
+    'CA Counties1': {
+      label: "California County",
+      idProperty: "NAME_PCASE"
+    },
+    'Bay Area Frap': {
+      label: "Wildfire Threat Class",
+      idProperty: "threat_cla"
+    },
+    'CA Land Management': {
+      label: "Wildfire Management Agency",
+      idProperty: "DPA_AGENCY"
+    },
+  };
+  
+  mapboxgl.accessToken = 'pk.eyJ1IjoibWFyaW5hZGF2aWVzIiwiYSI6ImNrNWhkZDJqMDAybWsza3B4Yzh6Y3EzeTUifQ.Q1If3_V9-bmk32fLj6pwcA';
+  var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/marinadavies/ck75pu8jj4cl91io4p4w7ow4d?fresh=true', 
+      center: [-120, 37.39],
+      zoom: 5
+  });
+  map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+  map.addControl(new mapboxgl.GeolocateControl({
+      positionOptions: {
+      enableHighAccuracy: true
+      },
+      trackUserLocation: true
+      })
+  );
+map.on('click', function(e){
+    var clickedFeatures = map.queryRenderedFeatures(e.point);
+    var listContainer = document.getElementById('dataList');
+    var listItems = '';
+    var matchedFeatures = clickedFeatures.filter(function(feature) {
+        return layersList.hasOwnProperty(feature.layer.id);  
+    });
+    matchedFeatures.forEach(function(feature){
+        var layerLabel = layersList[feature.layer.id].label;
+        var layerId = layersList[feature.layer.id].idProperty;
+        var myHtml = "<p class='data-item'><span class='data-descriptor'>" + layerLabel + "</span>: " + feature.properties[layerId] + "</p>";
+        listItems += myHtml;
+    })      
+  listContainer.innerHTML = listItems    
+});
+document.getElementById('fly').addEventListener('click', function() {
+map.flyTo({
+center: [-122.42, 37.76],
+zoom: 11,
+essential: true
+});
+});
+
+</script>
+
+</body>
+</html>
