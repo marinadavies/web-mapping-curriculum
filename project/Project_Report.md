@@ -1,6 +1,7 @@
 ## California Wildland Fires: Identifying Wildland Urban Interface Zones, Management Status, and Bay Area Fire Threats
   Leala Lingo and Marina Davies,
   Web Mapping,
+  Spring 2020,
   Univeristy of San Francisco GSAL Lab 
   
  
@@ -64,6 +65,9 @@ Next, the webmap was coded into the map flexbox. Controls were added to allow th
 The final flexbox displays data and has clickable links to enhance the user’s understanding of the webmap. A button was coded to allow the user to quickly zoom in on the Bay Area in order to show the functionality of the threat class layer. In future iterations of this map where state-wide data would be available, this button may not be necessary. Next, we created a space to display the data queried during the click event described above. This shows the user the county, management agency, and, currently in the bay area only, the threat class at the location of the click. Below the output of the click function, we included a legend showing the cartographic symbology for the WUI and threat classes, followed by an explanation of the layer and a link to additional information from the respective sources of the data. Finally, we provided a link to this document to further assist the user in understanding the purpose and intended use of the map.
 
 ### Challenges and Suggestions
+The initial challenge for this project was to identify the most important and useful information. Because of the significant threat and recent wildfire history in California, there is an abundance of data available online, including the types of vegetation used for groundcover, the geographic extent and ignition source of wildfires dating back to the 1800s, and more. While these other datasets were interesting, they were ultimately cut from the final map as the WUI zones and threat classes were generated using wildfire history, vegetation types, and other factors as inputs. 
+
+The next challenge was dealing with large data sets. WUI and fire threat class layers contained hundreds of thousands of points each, and were too large to load on free webmapping hosts. While WUI data was easily simplified and uploaded as a tileset, fire class data for the entire State of California remained too large to be hosted on mapbox as a single layer. For the scope and timeline of our project, we used ArcGIS to clip the data to a more manageable size. In the future, we suggest to split the state into approximately 10 equal parts, and create individual tilesets for each part so that the entirety of the fire class data could be uploaded into mapbox and eventually rendered and displayed for the user.
 
 
 
