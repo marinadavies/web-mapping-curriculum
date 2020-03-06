@@ -44,9 +44,10 @@ Other layers considered but rejected included information like historic fire bou
 The data layers selected were transformed as they were vector and raster datasets. Each dataset was simplified to remove excess information (i.e. coding internal to the department providing the data), and to make labels uniform for similar data across data sets. To simplify, we deleted unnecessary attribute fields from the attribute table of each dataset. We then used the mapshaper.org website to further simplify and smooth out polygon lines to reduce the size of the dataset. This was important because most of the data included in our map covered the state of California and were initially large file sizes. After shapefiles were simplified, we uploaded them to Mapbox and created tilesets of each dataset. Once the datasets were uploaded as tilesets, we styled our map using Mapbox Studio. From there we created a code to encompass all parts of our interactive map. Listed below is our methodology for each layer. 
 
 ##### WUI zones 
-WUI zones will be displayed as hollow polygons. These zones will be visible as the user zooms to county level. Along with all other data discussed below, the webpage containing the web map has a sidebar to the right of the map describing what WUI zones represent, along with citing the source for the information.
+WUI zones are displayed as polygons. These zones are visible as the user zooms to county level. Along with all other data discussed below, the webpage containing the web map has a sidebar to the right of the map describing what WUI zones represent, along with citing the source for the information. The sidebar will also identify what county the user clicks on.
 
-
+##### Bay Area Fire Threat Status
+Originally, this dataset was a raster and needed to be converted to a shapefile. The dataset covered the entire state of California and was clipped in ArcGIS to the San Francisco Bay Area. The dataset was too large to upload as a tileset so for the scope of our project we only display fire threat status for the Bay Area. The Bay Area Fire Threat Status layer is displayed as a polygon with a fill color corresponding to the threat status (Low to Very High). The sidebar on the right will indicate what wildfire threat class the user clicks on when in the Bay Area region. Additionally, a legend will be located on the map to show users the various threat levels and corresponding color. 
 
 
 
