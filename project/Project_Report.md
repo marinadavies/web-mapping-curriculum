@@ -49,6 +49,9 @@ WUI zones are displayed as polygons. These zones are visible as the user zooms t
 ##### Bay Area Fire Threat Status
 Originally, this dataset was a raster and needed to be converted to a shapefile. The dataset covered the entire state of California and was clipped in ArcGIS to the San Francisco Bay Area. The dataset was too large to upload as a tileset so for the scope of our project we only display fire threat status for the Bay Area. The Bay Area Fire Threat Status layer is displayed as a polygon with a fill color corresponding to the threat status (Low to Very High). The sidebar on the right will indicate what wildfire threat class the user clicks on when in the Bay Area region. Additionally, a legend will be located on the map to show users the various threat levels and corresponding color. 
 
+##### County Boundaries 
+County Boundaries are displayed as dark grey lines with the stylistic emphasis of showing the user the name of the counties being viewed and where boundaries are between counties for situational awareness. On the map, the user can click on an area within California and the sidebar will display what county the user clicked on. This is to help simplify the information generated on the map so the user doesn’t have to always zoom out to see what county they are in. 
+
 
 
 ### References
